@@ -1,0 +1,203 @@
+/* styles.module.css */
+
+:global {
+    /* Importing the font */
+    /* @font-face {
+      font-family: 'Hanken Grotesk';
+      src: url('./assets/fonts/HankenGrotesk-VariableFont_wght.ttf') format('truetype'),
+        url('./assets/fonts/static/HankenGrotesk-Medium.ttf') format('truetype'),
+        url('./assets/fonts/static/HankenGrotesk-Bold.ttf') format('truetype'),
+        url('./assets/fonts/static/HankenGrotesk-ExtraBold.ttf') format('truetype');
+    } */
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Hanken Grotesk';
+    /* width: 100%;
+    height: auto; */
+    background-position: center;
+    background-attachment: fixed;
+    
+    /* background-image: inherit; */
+  }
+  
+  main {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .card {
+    display: flex;
+    flex-direction: column;
+    background-color: #dde9df;
+    box-shadow: 4px 4px 25px 0px #16e9e9;
+    border-radius: 0;
+    width: 100%;
+    margin: 5vh auto;
+  }
+  
+  .card-left {
+    background: linear-gradient(to bottom, #d9a4ee 0% 20%, #dd51c6);
+    border-radius: 0 0 15px 15px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 20px;
+    width: 100%;
+  }
+  
+  .card-left h4 {
+    color: #141414;
+    text-align: center;
+    font-size: 20px;
+  }
+  
+  .card-left .score {
+    background: linear-gradient(to bottom, hsla(256, 72%, 46%, 1), #799cfb, #e2d9fb);
+    width: 50%;
+    border-radius: 50%;
+    height: 150px;
+    width: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .card-left .score h1 {
+    font-size: 50px;
+    color: #ffffff;
+  }
+  
+  .card-left .score span {
+    color: #f0e5f7;
+  }
+  
+  .card-left .score-content h2 {
+    font-size: 30px;
+    color: #ffffff;
+    text-align: center;
+  }
+  
+  .card-left .score-content p {
+    margin-top: 12px;
+    color: #f0e5f7;
+    text-align: center;
+  }
+  
+  .card-right {
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    width: 100%;
+  }
+  
+  .card-right h2 {
+    color: #3c485b;
+  }
+  
+  .card-right ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    row-gap: 12px;
+  }
+  
+  .card-right li {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px;
+    border-radius: 5px;
+  }
+  
+  .card-right li:nth-of-type(1) {
+    background: hsla(0, 100%, 67%, 0.623);
+  }
+  
+  .card-right li:nth-of-type(2) {
+    background: hsla(39, 100%, 56%, 0.637);
+  }
+  
+  .card-right li:nth-of-type(3) {
+    background: hsla(166, 100%, 37%, 0.678);
+  }
+  
+  .card-right li:nth-of-type(4) {
+    background: hsla(234, 85%, 45%, 0.658);
+  }
+  .card-right li:nth-of-type(5) {
+    background: hsla(14, 77%, 59%, 0.658);
+  }
+  .card-right li:nth-of-type(6) {
+    background: hsla(56, 85%, 45%, 0.568);
+  }
+  .card-right li:nth-of-type(7) {
+    background: hsla(125, 85%, 45%, 0.603);
+  }
+  .card-right li:nth-of-type(8) {
+    background: hsla(36, 89%, 65%, 0.623);
+  }
+  .card-right li:nth-of-type(9) {
+    background: hsla(214, 87%, 65%, 0.685);
+  }
+  .card-right li:nth-of-type(10) {
+    background: hsla(313, 85%, 45%, 0.603);
+  }
+  .card-right li:nth-of-type(11) {
+    background: hsla(0, 85%, 45%, 0.952);
+  }
+  
+  
+
+  
+  .card-right p {
+    font-weight: 900;
+  }
+  
+  .card-right a {
+    background: #3c485b;
+    padding: 12px;
+    text-align: center;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 18px;
+    border-radius: 30px;
+  }
+  
+  .card-right a:hover {
+    background: linear-gradient(to bottom, #e2d9fb 0% 20%, #799cfb);
+  }
+  
+  @media (min-width: 550px) {
+    body {
+      height: 100vh;
+    }
+  
+    main .card {
+      flex-direction: row;
+      width: 550px;
+      border-radius: 15px;
+    }
+  
+    main .card .card-left {
+      width: 50%;
+      border-radius: 15px;
+    }
+  
+    main .card .card-right {
+      width: 100%;
+    }
+  }
+  

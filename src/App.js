@@ -1,24 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+import { Routes, Route, BrowserRouter as Router } from "react-router-dom";
+import Login from "./component/login";
+import Signup from "./component/signup";
+import LandingPage from "./component/landingPage";
+import AllUser from "./component/AllUser";
+import Complaints from "./component/Complaints"
+import Notices from "./component/Notices";
+import HostelDetails from "./component/HostelDetails";
+import Profile from './component/Profile'
+import "./App.css";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<LandingPage />} />
+        <Route path="/LandingPage" element={<LandingPage />} />
+        <Route path="/signup" element={<Signup />} />
+        <Route path="/signin" element={<Login />} />
+        <Route path="/AllUser" element={<AllUser />} />
+        <Route path="/Complaints" element={<Complaints />} />
+        <Route path="/Notices" element={<Notices />} />
+        <Route path="/Complaints" element={<Complaints />} />
+        <Route path="/HostelDetails" element={<HostelDetails />} />
+        <Route path="/Profile" element={<Profile />} />
+        <Route path="*" element={<Signup />} />
+        {/* <Route path="*" element={<NotFound />} /> */}
+      </Routes>
+    </Router>
   );
 }
 

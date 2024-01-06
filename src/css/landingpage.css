@@ -1,0 +1,209 @@
+#landing{
+   
+
+    position:absolute ;
+    height: 600px;
+    right:-200px;
+    bottom: 100px;
+    transform: rotate(-15deg);
+    z-index: -1000;
+
+}
+#ad{
+  margin: 25vh 25vw;
+  /* display: block; */
+  color: white;
+}
+.navbar{
+   
+    width: 100%;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    background: #ece8e800;
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.4)
+}
+.navbar-brand{
+    font-weight:700;
+    font-size: 18px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-right: auto;
+}
+body{
+    background: #dbd1d167;
+    overflow-x:hidden ;
+}
+button{
+    background: none;
+     border-radius: 10px;
+     font-size: 15px;
+     /* font-family: 'Courier New', Courier, monospace; */
+     margin: 10px;
+     padding: 2px;
+     text-transform: uppercase;
+     width: 100px;
+     background: #4351e8;
+     color: white;
+     border: none;
+       
+}
+button.getstarted{
+    background: none;
+     border-radius: 10px;
+     font-size: 15px;
+     /* font-family: 'Courier New', Courier, monospace; */
+     margin: 0 10vw;
+     display: block;
+     padding: 6px;
+     text-transform: uppercase;
+     width: auto;
+     background: #4351e8;
+     color: white;
+     border: none;
+       
+}
+.components{
+  margin: 50px ;
+  
+}
+.card-title{
+text-decoration: underline;
+font-weight: 700;
+font-family: sans-serif;
+}
+
+
+.navbar-nav {
+    margin-left: auto;
+  }
+/* Target all list items in the navbar */
+.navbar-nav li {
+    /* Your styles here */
+    font-size: 18px;
+    color: black ;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  }
+  
+
+  .slogan h1{
+    
+    margin-top: 30vh;
+    margin-left: 10vw;
+    display: block;
+    color: rgb(43, 38, 38);
+    font-weight: bolder;
+    line-height: 2rem;
+    font-size: 2rem;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  }
+
+  .description{
+    margin: 3vh 10vw;
+    font-size: 20px;
+    line-height:1.2;
+    color: gray;
+    font-weight: normal;
+
+  }
+  #backg{
+    background:#242a55;
+   position: absolute;
+   right: -1000px;
+   height: 320px;
+   z-index: -1000;
+   
+  }
+.topdesign h2{
+    margin: 0 auto;
+    display: inline-block;
+}
+ 
+.footer {
+  font-size: 18px;
+  width: 90%;
+  background-color: #292f36;
+  color: white;
+  padding: 30px 0;
+  border-radius: 10px;
+  margin: 50px auto;
+ 
+}
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 50px;
+}
+
+.footer-content {
+  display: grid;
+  grid-template-columns: 25% 50% 25%;
+}
+
+
+.footer-menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+
+.footer-menu li {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+.footer-menu li:last-child {
+  margin-right: 0;
+}
+
+.footer-menu a {
+  color: white;
+  text-decoration: none;
+}
+
+.social-icons {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.social-icons li {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.social-icons li:last-child {
+  margin-right: 0;
+}
+
+.social-icons a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+.footer-bottom {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.footer-bottom p {
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .footer-content {
+      grid-template-columns: repeat(1, 1fr);
+      row-gap: 20px;
+  }
+  .footer-menu{
+      text-align: left;
+  }
+  .footer-menu li {
+    display: block;
+    margin-bottom: 10px;
+  }
+}
+

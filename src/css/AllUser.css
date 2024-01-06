@@ -1,0 +1,30 @@
+/* AllUser.css */
+body{
+    /* background-image: url('../images/bcg.png'); */
+    background-size: cover;
+    
+    
+}
+/* Add your custom styles for the table here */
+.table-container {
+    margin-top: 20px; /* Example margin */
+  }
+  
+  .table {
+    margin: 2vh auto;
+    width: 80vw;
+    border-collapse: collapse;
+    border:solid 2px #071c36;
+    opacity: 1;
+  }
+  
+  .table th, .table td {
+    padding: 8px;
+    border: 1px solid #798696;
+    text-align: left;
+  }
+  
+  .table th {
+    background-color: #f2f2f2;
+  }
+  
