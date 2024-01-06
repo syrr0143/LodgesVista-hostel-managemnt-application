@@ -39,8 +39,8 @@ const ComplaintList = () => {
 <div   >
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">LodgesVista</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <Link class="navbar-brand" to="#">LodgesVista</Link>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="/navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -49,16 +49,19 @@ const ComplaintList = () => {
           <Link class="nav-link active" aria-current="page" to="/AllUser">Users</Link>
         </li>
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Complaints</a>
+          <Link class="nav-link active" aria-current="page" to="/HostelDetails">Hostels</Link>
         </li>
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Notice</a>
+          <Link class="nav-link active" aria-current="page" to="/Complaints">Complaints</Link>
         </li>
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Payments</a>
+          <Link class="nav-link active" aria-current="page" to="/Notices">Notice</Link>
         </li>
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Profile</a>
+          <Link class="nav-link active" aria-current="page" to="/">Payments</Link>
+        </li>
+        <li class="nav-item">
+          <Link class="nav-link active" aria-current="page" to="/Profile">Profile</Link>
         </li>
       </ul>
       <form class="d-flex">

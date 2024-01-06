@@ -8,11 +8,12 @@ const HostelDetails = () => {
     // Fetch hostel details when the component mounts
     const fetchHostelDetails = async () => {
       try {
+        const token = localStorage.getItem("token");
         const response = await fetch(`${config.server}/hostelDetails`, {
           method: 'GET',
           headers: {
             'Content-Type': 'application/json',
-            Authorization: `eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhZG1pbklkIjoiNjU5OGNiNWJiNzEyYjNjNDU4YTVjMWYwIiwiaWF0IjoxNzA0NTEyNTQyLCJleHAiOjE3MDUxMTczNDJ9.2GOakmWeEBuN2Wkr2J-Qk0uvgXsRqYKphDna6PIXbWo`
+            Authorization: token
           },
         });
 
@@ -38,10 +39,10 @@ const HostelDetails = () => {
 
   return (
     <div>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+     <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">LodgesVista</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <Link class="navbar-brand" to="#">LodgesVista</Link>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="/navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -50,16 +51,19 @@ const HostelDetails = () => {
           <Link class="nav-link active" aria-current="page" to="/AllUser">Users</Link>
         </li>
         <li class="nav-item">
+          <Link class="nav-link active" aria-current="page" to="/HostelDetails">Hostels</Link>
+        </li>
+        <li class="nav-item">
           <Link class="nav-link active" aria-current="page" to="/Complaints">Complaints</Link>
         </li>
         <li class="nav-item">
           <Link class="nav-link active" aria-current="page" to="/Notices">Notice</Link>
         </li>
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Payments</a>
+          <Link class="nav-link active" aria-current="page" to="/">Payments</Link>
         </li>
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Profile</a>
+          <Link class="nav-link active" aria-current="page" to="/Profile">Profile</Link>
         </li>
       </ul>
       <form class="d-flex">
