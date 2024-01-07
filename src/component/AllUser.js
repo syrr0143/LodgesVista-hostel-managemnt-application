@@ -15,11 +15,12 @@ function AllUser() {
         // Fetch users from the backend when the component mounts
         const fetchUsers = async () => {
             try {
+              const token = localStorage.getItem("token");
                 const response = await axios.get(`${config.server}/allUsers`, {
                     method:'GET',
                     headers: {
                         'Content-Type': 'application/json',
-                        Authorization: `eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhZG1pbklkIjoiNjU5OGNiNWJiNzEyYjNjNDU4YTVjMWYwIiwiaWF0IjoxNzA0NTEyNTQyLCJleHAiOjE3MDUxMTczNDJ9.2GOakmWeEBuN2Wkr2J-Qk0uvgXsRqYKphDna6PIXbWo`
+                        Authorization: token
                       },
                 });
                 setUsers(response.data.users);

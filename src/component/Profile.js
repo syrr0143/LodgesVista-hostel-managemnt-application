@@ -11,9 +11,10 @@ const UserProfile = ({ userType }) => {
       const fetchData = async () => {
         
         try {
+          const token = localStorage.getItem('token');
             const headers = {
                 // Add your headers here, such as authentication tokens or content type
-                Authorization: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhZG1pbklkIjoiNjU3MWMyNjA5NmY0NTcxNGY4YWM3Y2JkIiwiaWF0IjoxNzA0NTEzODA1LCJleHAiOjE3MDUxMTg2MDV9.l7Y9gthB42HIiXjlQAyfRfIYlgsdHrfPcBdQ_FRxoHY',
+                Authorization: token,
                 // Other headers...
               };
               const response = await axios.get(`${config.server}/user/profile`, {

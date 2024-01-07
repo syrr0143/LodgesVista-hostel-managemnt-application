@@ -8,11 +8,12 @@ useEffect(() => {
     // Fetch hostel details when the component mounts
     const fetchNotices = async () => {
       try {
+        const token = localStorage.getItem('token');
         const response = await fetch(`${config.server}/readNotices`, {
           method: 'GET',
           headers: {
             'Content-Type': 'application/json',
-            Authorization: `eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhZG1pbklkIjoiNjU3MWMyNjA5NmY0NTcxNGY4YWM3Y2JkIiwiaWF0IjoxNzA0NTEzODA1LCJleHAiOjE3MDUxMTg2MDV9.l7Y9gthB42HIiXjlQAyfRfIYlgsdHrfPcBdQ_FRxoHY`
+            Authorization: token
           },
         });
 

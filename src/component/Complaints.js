@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import config from '../config';
-import bcg from '../images/bcg.png'
+
 import { Link } from 'react-router-dom';
 const ComplaintList = () => {
   const [complaints, setComplaints] = useState([]);
@@ -10,12 +10,10 @@ const ComplaintList = () => {
   useEffect(() => {
     const fetchComplaints = async () => {
       try {
-        // Assuming you have the JWT token stored somewhere (e.g., in localStorage)
-        const jwtToken = localStorage.getItem('your_jwt_token_key');
-
+        const token = localStorage.getItem('token');
         const response = await axios.get(`${config.server}/readComplaints`, {
           headers: {
-            Authorization: `eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhZG1pbklkIjoiNjU5OGNiNWJiNzEyYjNjNDU4YTVjMWYwIiwiaWF0IjoxNzA0NTEyNTQyLCJleHAiOjE3MDUxMTczNDJ9.2GOakmWeEBuN2Wkr2J-Qk0uvgXsRqYKphDna6PIXbWo`,
+            Authorization: token,
           },
         });
 
